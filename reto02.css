@@ -1,0 +1,109 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    margin: 0;
+    color: #1a1a1a;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+header p {
+    color: #6c757d;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* --- Galería Grid --- */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Tarjeta de cada Producto --- */
+.tarjeta {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- Efecto Hover (Al pasar el mouse) --- */
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* --- AJUSTE DE IMÁGENES --- */
+.tarjeta img {
+    width: 100%;           /* Ocupa todo el ancho de la tarjeta */
+    height: 220px;         /* Altura fija para que todas midan lo mismo */
+    object-fit: contain;   /* Muestra la imagen completa sin recortarla */
+    background-color: #ffffff; /* Fondo blanco por si la imagen es transparente */
+    padding: 15px;         /* Espacio alrededor para que respire el producto */
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+}
+
+.contenido {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.contenido h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    color: #222;
+}
+
+.contenido p {
+    color: #666;
+    font-size: 15px;
+    margin: 0 0 20px 0;
+    flex-grow: 1;
+    line-height: 1.5;
+}
+
+.precio {
+    font-size: 22px;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* --- Botón --- */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: auto;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

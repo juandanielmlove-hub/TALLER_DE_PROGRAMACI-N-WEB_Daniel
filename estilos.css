@@ -1,0 +1,275 @@
+/* Importación de fuentes Google Fonts con aire clásico/vintage */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+    --color-pergamino: #f4ecdf;
+    --color-pergamino-oscuro: #e8dbcc;
+    --color-cuero: #3c2415;
+    --color-cuero-claro: #5c3a21;
+    --color-dorado-viejo: #a67c52;
+    --color-texto-antiguo: #2b1d12;
+    --color-blanco-papel: #fcf9f2;
+    --color-alerta-fondo: #fcf0d8;
+    --color-alerta-texto: #7a4f04;
+    --color-rojo-vintage: #8b2626;
+}
+
+body {
+    font-family: 'Lora', serif;
+    background-color: var(--color-pergamino);
+    background-image: radial-gradient(circle, #f9f5ec 0%, #ebdcc7 100%);
+    margin: 0;
+    padding: 30px;
+    color: var(--color-texto-antiguo);
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: auto;
+    background: var(--color-blanco-papel);
+    padding: 35px;
+    border-radius: 4px;
+    box-shadow: 0 8px 30px rgba(60, 36, 21, 0.2);
+    border: 3px double var(--color-dorado-viejo);
+}
+
+/* Cabecera con estilo antiguo */
+.header-biblioteca {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    border-bottom: 2px solid var(--color-dorado-viejo);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.logo-biblioteca {
+    font-size: 45px;
+    background: var(--color-pergamino-oscuro);
+    padding: 15px 20px;
+    border-radius: 50%;
+    border: 1px solid var(--color-dorado-viejo);
+}
+
+h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--color-cuero);
+}
+
+h1 {
+    font-size: 28px;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+p.subtitulo {
+    color: var(--color-dorado-viejo);
+    margin: 5px 0 0 0;
+    font-style: italic;
+    font-weight: 600;
+}
+
+/* Tarjetas de Estadísticas estilo pergamino */
+.tarjetas-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card-stat {
+    background: var(--color-pergamino-oscuro);
+    padding: 18px 20px;
+    border-radius: 4px;
+    border-left: 5px solid var(--color-cuero);
+    border-top: 1px solid #d4c3ab;
+    border-right: 1px solid #d4c3ab;
+    border-bottom: 1px solid #d4c3ab;
+}
+
+.card-stat h3 {
+    margin: 0;
+    font-size: 13px;
+    color: var(--color-cuero-claro);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.card-stat p {
+    margin: 8px 0 0 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-cuero);
+    font-family: 'Cinzel', serif;
+}
+
+/* Formularios y Buscador */
+.seccion-formulario, .seccion-busqueda {
+    background: #f7f2e8;
+    padding: 25px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    border: 1px solid #dcd1be;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.03);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--color-cuero-claro);
+    font-family: 'Cinzel', serif;
+}
+
+input, select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #c7b59b;
+    border-radius: 3px;
+    background: var(--color-blanco-papel);
+    color: var(--color-texto-antiguo);
+    font-family: 'Lora', serif;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--color-cuero);
+    box-shadow: 0 0 5px rgba(60, 36, 21, 0.2);
+}
+
+button[type="submit"], .btn-accion {
+    background: var(--color-cuero);
+    color: var(--color-blanco-papel);
+    border: none;
+    padding: 11px 20px;
+    margin-top: 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover, .btn-accion:hover {
+    background: var(--color-cuero-claro);
+}
+
+.btn-secundario {
+    background: var(--color-dorado-viejo);
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 15px;
+    border-radius: 3px;
+    color: white;
+    font-size: 13px;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+}
+
+.btn-secundario:hover {
+    background: #8e6844;
+}
+
+/* Tabla de Registros Estilo Antiguo */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: var(--color-blanco-papel);
+}
+
+th, td {
+    border: 1px solid #dcd1be;
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background: var(--color-cuero);
+    color: var(--color-blanco-papel);
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+tr:nth-child(even) {
+    background: #fbf8f2;
+}
+
+/* Alerta Stock Bajo (Reto 2) - Tono envejecido/alerta */
+.stock-bajo {
+    background-color: var(--color-alerta-fondo) !important;
+    color: var(--color-alerta-texto);
+    font-weight: bold;
+}
+
+.badge-alerta {
+    background: #8b4513;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-family: 'Cinzel', serif;
+    margin-left: 6px;
+    letter-spacing: 0.5px;
+}
+
+.acciones-tabla {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn-editar {
+    background: var(--color-dorado-viejo);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 'Cinzel', serif;
+}
+
+.btn-editar:hover {
+    background: #8e6844;
+}
+
+.form-eliminar {
+    display: inline;
+}
+
+.btn-eliminar {
+    background: var(--color-rojo-vintage);
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: 'Cinzel', serif;
+}
+
+.btn-eliminar:hover {
+    background: #6e1d1d;
+}
+
+.error {
+    background: #fae1e1;
+    border: 1px solid #e8b4b4;
+    color: var(--color-rojo-vintage);
+    padding: 12px;
+    border-radius: 3px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
